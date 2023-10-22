@@ -35,7 +35,7 @@ header {
     --size: 15rem;
     height: var(--size);
     width: var(--size);
-    background-image: url("/imgs/pfp.jpeg");
+    background-image: url("./imgs/pfp.jpeg");
     background-repeat: no-repeat;
     background-size: 1725px;
     background-position: -710px -320px;
