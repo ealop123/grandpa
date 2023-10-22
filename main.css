@@ -1,0 +1,77 @@
+:root {
+    --c1: #000814;
+    --c2: #001D3D;
+    --c3: #003566;
+    --c4: #FFC300;
+    --c5: #FFD60A;
+    --bg: var(--c2);
+    --txt: var(--c4);
+}
+
+body {
+    background: linear-gradient(var(--c1), var(--c2));
+    color: var(--txt);
+    min-height: 100vh;
+    max-width: 600px;
+    margin: auto;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    aspect-ratio: 1;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+:is(header, main) :is(h1, h2, p) {
+    margin: 0;
+    font-family: sans-serif;
+    filter: drop-shadow(0 0 2px var(--c1));
+}
+
+.pfp {
+    --size: 15rem;
+    height: var(--size);
+    width: var(--size);
+    background-image: url("/imgs/pfp.jpeg");
+    background-repeat: no-repeat;
+    background-size: 1725px;
+    background-position: -710px -320px;
+    border-radius: 50%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+img, video {
+    border-radius: 1rem;
+}
+
+main h2:not(:first-child)::before {
+    display: block;
+    content: "";
+    width: 70%;
+    margin: auto;
+    height: 5px;
+    background: var(--txt);
+    border-radius: 100px;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.gallery :is(img, video) {
+    max-width: calc(100dvw - 1rem);
+    max-height: calc(100dvh - 1rem);
+}
